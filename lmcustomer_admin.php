@@ -90,7 +90,7 @@ if (isset($_SESSION['is_login']) && $_SESSION['is_login'] == TRUE && $_SESSION['
                                             <th>Customer Name</th>
                                             <th>Province</th>
                                             <th>IPRAN</th>
-                                            <th>Type</th>
+                                            <th>Performa</th>
                                             <th>Prepare Core</th>
                                         </tr>
                                     </thead>

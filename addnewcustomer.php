@@ -128,6 +128,18 @@ if (isset($_SESSION['is_login']) && $_SESSION['is_login'] == TRUE && $_SESSION['
                                                 id="inputType" placeholder="Type">
                                         </div>
                                     </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <input type="text" class="form-control form-control-user"
+                                                onfocus="(this.type='datetime-local')" onblur="(this.type='text')"
+                                                id="inputPerforma" placeholder="Performa">
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control form-control-user"
+                                                onfocus="(this.type='datetime-local')" onblur="(this.type='text')"
+                                                id="inputPrepareCore" placeholder="Prepare Core">
+                                        </div>
+                                    </div>
                                     <div class="form-group">
                                         <input type="text" class="form-control form-control-user" id="inputRemark"
                                             placeholder="Remark">

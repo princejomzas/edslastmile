@@ -1,7 +1,7 @@
 <?PHP
 session_start();
 date_default_timezone_set("Asia/Bangkok");
-if (isset($_SESSION['is_login']) && $_SESSION['is_login'] == TRUE && $_SESSION['LVL'] == "1") {
+if (isset($_SESSION['is_login']) && $_SESSION['is_login'] == TRUE && $_SESSION['LVL'] == "2") {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,24 +36,18 @@ if (isset($_SESSION['is_login']) && $_SESSION['is_login'] == TRUE && $_SESSION['
         <?php include "includes/sidebar_upper.php";?>
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
-            <a class="nav-link" href="index.php">
+            <a class="nav-link" href="main_guest.php">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span></a>
         </li>
 
         <!-- Nav Item - Tables -->
         <li class="nav-item">
-            <a class="nav-link" href="lmcustomer.php">
+            <a class="nav-link" href="lmcustomer_guest.php">
                 <i class="fas fa-fw fa-table"></i>
                 <span>List Customer</span></a>
         </li>
 
-        <!-- Nav Item - Add Customer -->
-        <li class="nav-item active">
-            <a class="nav-link" href="addnewcustomer.php">
-                <i class="fas fa-fw fa-plus"></i>
-                <span>Add New Customer</span></a>
-        </li>
         <?php include "includes/sidebar_lower.php";?>
         <!-- End of Sidebar -->
 
@@ -72,63 +66,78 @@ if (isset($_SESSION['is_login']) && $_SESSION['is_login'] == TRUE && $_SESSION['
                     <div class="col-lg-6">
                         <div class="card shadow mb-4">
                             <div class="card-header py-3">
-                                <h6 class="m-0 font-weight-bold text-primary">Add New EDS Lastmile Customer</h6>
+                                <h6 class="m-0 font-weight-bold text-primary">Customer Detail</h6>
+                                <div class="font-weight-lighter" style="font-size:10px">Last Update</div>
                             </div>
                             <div class="card-body">
-                            <div class="form-group">
-                                    <input class="form-control form-control-user" id="displayProjectName" value="Project Name" readonly>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" id="displayCustomerName" value="Customer Name" readonly>
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" id="displayCustomerLat" value="Customer Latitude" readonly>
+                                <form class="user">
+                                    <div class="form-group">
+                                        <input class="form-control form-control-user" id="displayProjectName" value="Project Name" readonly>
                                     </div>
-                                    <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user" id="displayCustomerLong" value="Customer Longitude" readonly>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control form-control-user" id="displayCustomerName" value="Customer Name" readonly>
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" id="displayIpran" value="IPRAN" readonly>
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user"
-                                            id="displayIpranThai" value="IPRAN Name Thai" readonly>
+                                    <div class="form-group row">
+                                        <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <input type="text" class="form-control form-control-user" id="displayCustomerLat" value="Customer Latitude" readonly>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control form-control-user" id="displayCustomerLong" value="Customer Longitude" readonly>
+                                        </div>
                                     </div>
-                                    <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user"
-                                            id="displayProvince" value="Province" readonly>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control form-control-user" id="displayIpran" value="IPRAN" readonly>
                                     </div>
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user"
-                                            id="displayIpranLat" value="IPRAN Latitude" readonly>
+                                    <div class="form-group row">
+                                        <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <input type="text" class="form-control form-control-user"
+                                                id="displayIpranThai" value="IPRAN Name Thai" readonly>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control form-control-user"
+                                                id="displayProvince" value="Province" readonly>
+                                        </div>
                                     </div>
-                                    <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user"
-                                            id="displayIpranLong" value="IPRAN Longitude" readonly>
+                                    <div class="form-group row">
+                                        <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <input type="text" class="form-control form-control-user"
+                                                id="displayIpranLat" value="IPRAN Latitude" readonly>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control form-control-user"
+                                                id="displayIpranLong" value="IPRAN Longitude" readonly>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user"
-                                            id="displayLM" value="Lastmile" readonly>
+                                    <div class="form-group row">
+                                        <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <input type="text" class="form-control form-control-user"
+                                                id="displayLM" value="Lastmile" readonly>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control form-control-user"
+                                                id="displayType" value="Type" readonly>
+                                        </div>
                                     </div>
-                                    <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user"
-                                            id="displayType" value="Type" readonly>
+                                    <div class="form-group row">
+                                        <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <input type="text" class="form-control form-control-user"
+                                                onfocus="(this.type='datetime-local')" onblur="(this.type='text')"
+                                                id="inputPerforma" placeholder="Performa" readonly>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control form-control-user"
+                                                onfocus="(this.type='datetime-local')" onblur="(this.type='text')"
+                                                id="inputPrepareCore" placeholder="Prepare Core" readonly>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" id="displayRemark"
-                                        value="Remark" readonly>
-                                </div>
-                                <a href="lmcustomer_guest.php" class="btn btn-secondary btn-user btn-block">
-                                    Back
-                                </a>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control form-control-user" id="displayRemark"
+                                            value="Remark" readonly>
+                                    </div>
+                                    <a href="lmcustomer_guest.php" class="btn btn-secondary btn-user btn-block">
+                                        Back
+                                    </a>
+                                </form>
                             </div>
                         </div>
                     </div>

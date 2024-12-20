@@ -73,65 +73,80 @@ if (isset($_SESSION['is_login']) && $_SESSION['is_login'] == TRUE && $_SESSION['
                         <div class="card shadow mb-4">
                             <div class="card-header py-3">
                                 <h6 class="m-0 font-weight-bold text-primary">Customer Detail</h6>
+                                <div class="font-weight-lighter" style="font-size:10px">Last Update</div>
                             </div>
                             <div class="card-body">
-                                <div class="form-group">
-                                    <input class="form-control form-control-user" id="changeProjectName" value="Project Name">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" id="changeCustomerName" value="Customer Name">
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" id="changeCustomerLat" value="Customer Latitude">
+                                <form class="user">
+                                    <div class="form-group">
+                                        <input class="form-control form-control-user" id="changeProjectName" value="Project Name">
                                     </div>
-                                    <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user" id="changeCustomerLong" value="Customer Longitude">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control form-control-user" id="changeCustomerName" value="Customer Name">
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" id="changeIpran" value="IPRAN">
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user"
-                                            id="changeIpranThai" value="IPRAN Name Thai">
+                                    <div class="form-group row">
+                                        <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <input type="text" class="form-control form-control-user" id="changeCustomerLat" value="Customer Latitude">
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control form-control-user" id="changeCustomerLong" value="Customer Longitude">
+                                        </div>
                                     </div>
-                                    <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user"
-                                            id="changeProvince" value="Province">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control form-control-user" id="changeIpran" value="IPRAN">
                                     </div>
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user"
-                                            id="changeIpranLat" value="IPRAN Latitude">
+                                    <div class="form-group row">
+                                        <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <input type="text" class="form-control form-control-user"
+                                                id="changeIpranThai" value="IPRAN Name Thai">
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control form-control-user"
+                                                id="changeProvince" value="Province">
+                                        </div>
                                     </div>
-                                    <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user"
-                                            id="changeIpranLong" value="IPRAN Longitude">
+                                    <div class="form-group row">
+                                        <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <input type="text" class="form-control form-control-user"
+                                                id="changeIpranLat" value="IPRAN Latitude">
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control form-control-user"
+                                                id="changeIpranLong" value="IPRAN Longitude">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user"
-                                            id="changeLM" value="Lastmile">
+                                    <div class="form-group row">
+                                        <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <input type="text" class="form-control form-control-user"
+                                                id="changeLM" value="Lastmile">
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control form-control-user"
+                                                id="changeType" value="Type">
+                                        </div>
                                     </div>
-                                    <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user"
-                                            id="changeType" value="Type">
+                                    <div class="form-group row">
+                                        <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <input type="text" class="form-control form-control-user"
+                                                onfocus="(this.type='datetime-local')" onblur="(this.type='text')"
+                                                id="inputPerforma" placeholder="Performa">
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control form-control-user"
+                                                onfocus="(this.type='datetime-local')" onblur="(this.type='text')"
+                                                id="inputPrepareCore" placeholder="Prepare Core">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" id="changeRemark"
-                                        value="Remark">
-                                </div>
-                                <a href="login.html" class="btn btn-warning btn-user btn-block">
-                                    Edit Customer
-                                </a>
-                                <a href="lmcustomer_admin.php" class="btn btn-secondary btn-user btn-block">
-                                    Back
-                                </a>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control form-control-user" id="changeRemark"
+                                            value="Remark">
+                                    </div>
+                                    <a href="login.html" class="btn btn-warning btn-user btn-block">
+                                        Edit Customer
+                                    </a>
+                                    <a href="lmcustomer_admin.php" class="btn btn-secondary btn-user btn-block">
+                                        Back
+                                    </a>
+                                </form>
                             </div>
                         </div>
                     </div>

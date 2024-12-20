@@ -4,7 +4,7 @@ session_start();
 $dataObject = $_POST['myData'];
 $adpwd = $dataObject['password'];
 
-if($adpwd != "AdminLM1234") {
+if($adpwd != "admin") {
 	$_SESSION['is_login'] = FALSE;
     echo 0;
 }
